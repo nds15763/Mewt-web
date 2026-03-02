@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Info, X, Navigation } from "lucide-react";
+import { cn } from "@/lib/utils";
 import markersData from "@/data/markers.json";
 
 export const MapHero = () => {
