@@ -5,26 +5,26 @@ import { Smile, MessageSquare, Heart, Shield, Sparkles, Map } from "lucide-react
 
 const features = [
   {
-    title: "表情互动机会",
-    description: "在地图上遇到喜欢的猫咪，可以发送可爱的喵语表情进行互动，建立美妙连接。",
-    icon: <Smile className="text-brand-purple" size={32} />,
+    title: "多维足迹记录",
+    description: "在地图上标记您的每一个足迹，支持上传照片和心情感悟，分享精彩旅程。",
+    icon: <Map className="text-brand-purple" size={32} />,
     color: "bg-brand-purple/10",
   },
   {
-    title: "社区实时同步",
-    description: "每一个目击点位都会实时同步给周边用户，极大提高寻回效率。",
-    icon: <Map className="text-brand-green" size={32} />,
+    title: "社区实时互动",
+    description: "每一个打卡点位都能与周边驴友互动，交流实时攻略和旅行心得。",
+    icon: <MessageSquare className="text-brand-green" size={32} />,
     color: "bg-brand-green/10",
   },
   {
-    title: "爱心值系统",
-    description: "通过提供有效信息积累爱心值，可以兑换特殊装饰和应用高级功能。",
-    icon: <Heart className="text-red-500" size={32} />,
-    color: "bg-red-50",
+    title: "里程成就系统",
+    description: "通过打卡积累旅行里程，解锁专属勋章和全球旅行家头衔。",
+    icon: <Sparkles className="text-brand-yellow" size={32} />,
+    color: "bg-brand-yellow/10",
   },
   {
-    title: "安全隐私保障",
-    description: "严格的隐私控制，您可以自主选择位置信息的展示范围和详细程度。",
+    title: "安全隐私控制",
+    description: "灵活的隐私设置，您可以自主选择足迹的展示范围和详细地理信息。",
     icon: <Shield className="text-blue-500" size={32} />,
     color: "bg-blue-50",
   },
@@ -54,7 +54,7 @@ export const FeatureSection = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl font-black text-slate-900 mb-8 tracking-tight"
           >
-            不只是地图，更是<span className="text-brand-purple italic">温暖的社区</span>
+            不只是地图，更是<span className="text-brand-purple italic">旅行者的社区</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export const FeatureSection = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-slate-600 leading-relaxed"
           >
-            Mewt 致力于通过技术手段连接每一位爱猫人士，让寻找迷路猫不再是孤军奋战，让每一次相遇都充满温情。
+            Mewt 致力于通过地理信息技术连接全球旅行者，让探索世界不再是孤身一人，让每一次远行都更有意义。
           </motion.p>
         </div>
 
@@ -105,14 +105,14 @@ export const FeatureSection = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
               <div>
                 <h3 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
-                  极简交互，<br />极致的高效寻回
+                  极简交互，<br />极致的旅行体验
                 </h3>
                 <div className="space-y-6">
                   {[
-                    "一键标记发现点位",
-                    "多维度特征描述与图片上传",
-                    "智能匹配历史走失数据",
-                    "区域爱心志愿者即时通知"
+                    "一键标记打卡点位",
+                    "多维度游记描述与图片上传",
+                    "智能匹配周边热门景点",
+                    "全球驴友动态即时通知"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4 text-white/90 font-bold text-lg">
                       <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
@@ -152,18 +152,18 @@ export const FeatureSection = () => {
                          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User" />
                        </div>
                        <div className="text-center">
-                         <div className="font-bold text-xl">爱猫者 #1024</div>
-                         <div className="text-sm opacity-80 mt-1">青铜等级寻猫官</div>
+                         <div className="font-bold text-xl">旅行者 #1024</div>
+                         <div className="text-sm opacity-80 mt-1">资深环球旅行家</div>
                        </div>
                      </div>
                      <div className="p-6 -mt-8 bg-white rounded-t-3xl shadow-lg">
                         <div className="flex justify-between mb-8">
                           <div className="bg-slate-50 p-4 rounded-2xl text-center flex-1 mr-2">
-                            <div className="text-brand-purple font-black text-xl">124</div>
-                            <div className="text-[10px] uppercase text-slate-400 font-bold">爱心值</div>
+                            <div className="text-brand-purple font-black text-xl">1.2k</div>
+                            <div className="text-[10px] uppercase text-slate-400 font-bold">足迹里程</div>
                           </div>
                           <div className="bg-slate-50 p-4 rounded-2xl text-center flex-1 ml-2">
-                            <div className="text-brand-green font-black text-xl">8</div>
+                            <div className="text-brand-green font-black text-xl">24</div>
                             <div className="text-[10px] uppercase text-slate-400 font-bold">勋章数</div>
                           </div>
                         </div>

@@ -14,10 +14,10 @@ export default async function BlogPage() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto mb-20 text-center">
           <h1 className="text-6xl font-black text-slate-900 mb-8 tracking-tight">
-            社区<span className="text-brand-purple">动态与指南</span>
+            旅行<span className="text-brand-purple">动态与指南</span>
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed font-medium">
-            获取最新的产品更新、寻猫技巧以及感人的社区重逢故事。
+            获取最新的产品更新、旅行攻略以及感人的驴友足迹分享。
           </p>
         </div>
 

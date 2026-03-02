@@ -1,4 +1,4 @@
-import { Cat, Github, Twitter, Instagram } from "lucide-react";
+import { Compass, Github, Twitter, Instagram } from "lucide-react";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -9,14 +9,14 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center text-white shadow-lg">
-                <Cat size={24} />
+                <Compass size={24} />
               </div>
               <span className="text-2xl font-bold tracking-tight text-slate-900">
                 Mewt
               </span>
             </Link>
             <p className="text-slate-600 leading-relaxed max-w-xs">
-              连接社区，守护每一只小猫。让寻找迷路猫变得更简单、更高效。
+              探索世界，记录足迹。让旅行变得更简单、更有趣。
             </p>
             <div className="flex gap-4 mt-8">
               <Link href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-brand-purple hover:text-white transition-all duration-300">
@@ -34,7 +34,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">产品</h4>
             <ul className="space-y-4">
-              <li><Link href="#map" className="text-slate-600 hover:text-brand-purple transition-colors">迷猫地图</Link></li>
+              <li><Link href="#map" className="text-slate-600 hover:text-brand-purple transition-colors">旅游足迹</Link></li>
               <li><Link href="#features" className="text-slate-600 hover:text-brand-purple transition-colors">App 特色</Link></li>
               <li><Link href="#" className="text-slate-600 hover:text-brand-purple transition-colors">下载应用</Link></li>
               <li><Link href="#" className="text-slate-600 hover:text-brand-purple transition-colors">价格计划</Link></li>

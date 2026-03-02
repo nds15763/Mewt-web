@@ -57,7 +57,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             
             <h2 className="text-3xl font-black text-slate-900 mt-16 mb-8">为什么选择 Mewt？</h2>
             <p className="text-xl text-slate-700 leading-relaxed mb-8 font-medium">
-              在快节奏的城市生活中，宠物已经成为我们不可或缺的家庭成员。然而，猫咪天性好奇且擅长隐藏，一旦走失，传统的寻宠方式往往效率极低。
+              在快节奏的现代生活中，旅行已经成为我们探索自我、连接世界的重要方式。然而，碎片化的攻略和散乱的足迹记录往往让旅行的意义大打折扣。
             </p>
             
             <div className="my-12 p-8 bg-brand-purple/5 rounded-4xl border-2 border-brand-purple/10">
@@ -65,21 +65,21 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-brand-purple text-white flex items-center justify-center text-xs mt-1">✓</div>
-                  <span className="text-lg text-slate-700 font-bold">基于地理位置的精准通报</span>
+                  <span className="text-lg text-slate-700 font-bold">基于地理位置的精准足迹记录</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-brand-purple text-white flex items-center justify-center text-xs mt-1">✓</div>
-                  <span className="text-lg text-slate-700 font-bold">实时的社区志愿者通知系统</span>
+                  <span className="text-lg text-slate-700 font-bold">实时的全球驴友动态互动系统</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-brand-purple text-white flex items-center justify-center text-xs mt-1">✓</div>
-                  <span className="text-lg text-slate-700 font-bold">科学的寻宠指导与资源对接</span>
+                  <span className="text-lg text-slate-700 font-bold">详尽的旅行攻略与足迹点位分享</span>
                 </li>
               </ul>
             </div>
 
             <p className="text-xl text-slate-700 leading-relaxed font-medium">
-              我们将持续更新更多关于猫咪保护和寻回的专业知识，敬请关注。
+              我们将持续更新更多关于全球旅行和足迹打卡的专业知识，敬请关注。
             </p>
           </div>
 

@@ -47,13 +47,13 @@ export const MapHero = () => {
               </div>
               {/* Status Badge */}
               <div className={`absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-bold text-white shadow-md
-                ${marker.status === 'Found' ? 'bg-brand-green' : marker.status === 'Searching' ? 'bg-red-500' : 'bg-brand-yellow'}
+                ${marker.status === 'Visited' ? 'bg-brand-green' : marker.status === 'Planning' ? 'bg-blue-500' : 'bg-brand-yellow'}
               `}>
                 <MapPin size={10} fill="currentColor" />
               </div>
-              {/* Pulse effect for Searching */}
-              {marker.status === 'Searching' && (
-                <div className="absolute inset-0 rounded-full bg-red-500/30 animate-ping -z-10" />
+              {/* Pulse effect for Planning */}
+              {marker.status === 'Planning' && (
+                <div className="absolute inset-0 rounded-full bg-blue-500/30 animate-ping -z-10" />
               )}
             </div>
           </motion.button>
@@ -70,13 +70,13 @@ export const MapHero = () => {
         >
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
-            <span className="text-sm font-bold text-brand-purple tracking-widest uppercase">实时迷猫动态</span>
+            <span className="text-sm font-bold text-brand-purple tracking-widest uppercase">实时旅游足迹</span>
           </div>
           <h1 className="text-4xl font-black text-slate-900 leading-tight mb-4">
-            让每一只迷路的猫咪<br /><span className="text-brand-purple">都能平安回家</span>
+            探索世界的每一个角落<br /><span className="text-brand-purple">记录您的精彩旅程</span>
           </h1>
           <p className="text-slate-600 mb-8 text-lg">
-            基于社区地理信息的迷猫互助平台。您可以实时发布目击点位，协作寻找走失爱宠。
+            基于地理信息的旅游足迹分享平台。您可以实时标记打卡点位，与全球旅行者分享您的见闻。
           </p>
           <div className="flex gap-4">
             <button className="flex-1 bg-brand-purple text-white px-6 py-4 rounded-2xl font-bold shadow-xl shadow-brand-purple/30 hover:bg-brand-purple-dark hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
@@ -99,17 +99,17 @@ export const MapHero = () => {
         >
           <div className="text-center">
             <div className="text-2xl font-black text-brand-purple">2,450</div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-tighter">活跃用户</div>
+            <div className="text-xs font-bold text-slate-500 uppercase tracking-tighter">活跃驴友</div>
           </div>
           <div className="w-px h-8 bg-slate-200" />
           <div className="text-center">
-            <div className="text-2xl font-black text-brand-green">184</div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-tighter">成功找回</div>
+            <div className="text-2xl font-black text-brand-green">1,184</div>
+            <div className="text-xs font-bold text-slate-500 uppercase tracking-tighter">打卡足迹</div>
           </div>
           <div className="w-px h-8 bg-slate-200" />
           <div className="text-center">
-            <div className="text-2xl font-black text-brand-yellow">12</div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-tighter">今日目击</div>
+            <div className="text-2xl font-black text-brand-yellow">42</div>
+            <div className="text-xs font-bold text-slate-500 uppercase tracking-tighter">今日新增</div>
           </div>
         </motion.div>
       </div>
@@ -138,9 +138,9 @@ export const MapHero = () => {
                 <h3 className="text-2xl font-black text-slate-900 mb-1">{selectedMarker.name}</h3>
                 <div className={cn(
                   "px-4 py-1 rounded-full text-xs font-bold text-white mb-4",
-                  selectedMarker.status === 'Found' ? 'bg-brand-green' : selectedMarker.status === 'Searching' ? 'bg-red-500' : 'bg-brand-yellow'
+                  selectedMarker.status === 'Visited' ? 'bg-brand-green' : selectedMarker.status === 'Planning' ? 'bg-blue-500' : 'bg-brand-yellow'
                 )}>
-                  {selectedMarker.status === 'Found' ? '已找回' : selectedMarker.status === 'Searching' ? '紧急寻找中' : '目击报告'}
+                  {selectedMarker.status === 'Visited' ? '已打卡' : selectedMarker.status === 'Planning' ? '计划中' : '心愿单'}
                 </div>
                 <p className="text-slate-600 mb-6 italic">"{selectedMarker.description}"</p>
                 <button className="w-full bg-brand-purple/10 text-brand-purple py-3 rounded-2xl font-bold hover:bg-brand-purple hover:text-white transition-all duration-300">

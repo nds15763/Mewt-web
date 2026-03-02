@@ -12,19 +12,19 @@ export async function getPosts() {
     return [
       {
         id: "1",
-        title: "Mewt 2.0 版本更新说明：全新爱心值系统上线",
+        title: "Mewt 2.0 版本更新说明：足迹热力图功能上线",
         slug: "mewt-2-0-update",
         date: "2026-03-01",
         category: "产品更新",
-        excerpt: "我们引入了全新的爱心值激励机制，旨在奖励积极提供寻猫线索的社区成员...",
+        excerpt: "我们引入了全新的足迹热力图功能，旨在让您更直观地回顾自己的旅行历程...",
       },
       {
         id: "2",
-        title: "寻猫指南：发现迷路猫后的黄金 48 小时该做什么？",
-        slug: "finding-guide-48h",
+        title: "旅行指南：第一次独自出国旅行需要准备什么？",
+        slug: "travel-guide-prep",
         date: "2026-02-25",
-        category: "科普知识",
-        excerpt: "专业的寻宠专家建议，发现猫咪走失后的前 48 小时是寻回成功率最高的黄金期...",
+        category: "旅行攻略",
+        excerpt: "资深旅行达人建议，第一次出国旅行的前 48 小时准备工作至关重要...",
       },
     ];
   }
