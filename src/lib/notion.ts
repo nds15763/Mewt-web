@@ -30,6 +30,7 @@ export async function getPosts() {
   }
 
   try {
+    // @ts-ignore
     const response = await notion.databases.query({
       database_id: databaseId!,
       filter: {
