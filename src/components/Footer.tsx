@@ -71,8 +71,8 @@ export const Footer = ({ t, locale }: Props) => {
         </FooterColumn>
 
         <FooterColumn title={t.footer.sectionsTitle.legal}>
-          <FooterLink href="#terms">{t.footer.links.terms}</FooterLink>
-          <FooterLink href="#privacy">{t.footer.links.privacy}</FooterLink>
+          <FooterLink href="/terms">{t.footer.links.terms}</FooterLink>
+          <FooterLink href="/privacy">{t.footer.links.privacy}</FooterLink>
         </FooterColumn>
 
         <FooterColumn title={t.footer.sectionsTitle.contact}>

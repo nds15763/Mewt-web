@@ -1,6 +1,5 @@
 import { headers } from "next/headers";
 import { MewtHero } from "@/components/MewtHero";
-import { LegalSections } from "@/components/LegalSections";
 import { Footer } from "@/components/Footer";
 import { DEFAULT_LOCALE, dict, isLocale, type Locale } from "@/lib/i18n";
 
@@ -13,7 +12,6 @@ export default async function Home() {
   return (
     <>
       <MewtHero t={t} locale={locale} />
-      <LegalSections t={t} />
       <Footer t={t} locale={locale} />
     </>
   );
