@@ -6,10 +6,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #2a2a26;
+  background: #ffffff;
   font-family: var(--font-noto-sans-jp), "Hiragino Sans", "PingFang SC",
     "Noto Sans JP", sans-serif;
-  min-height: 100vh;
+  color: #1a1a1a;
 }
 
 * {

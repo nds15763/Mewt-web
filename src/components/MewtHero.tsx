@@ -79,8 +79,8 @@ export const MewtHero = () => {
   return (
     <div
       style={{
-        background: "#2a2a26",
-        minHeight: "100vh",
+        background: "#ffffff",
+        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -93,8 +93,6 @@ export const MewtHero = () => {
           width: 1440,
           height: 900,
           transformOrigin: "center center",
-          boxShadow: "0 30px 80px rgba(0,0,0,0.4)",
-          borderRadius: 6,
           overflow: "hidden",
           background: "#ffffff",
           position: "relative",
@@ -776,6 +774,36 @@ export const MewtHero = () => {
               ↑ 友達が Pin した猫
             </div>
           </div>
+        </div>
+
+        {/* 底部链接 */}
+        <div
+          style={{
+            position: "absolute",
+            left: 56,
+            bottom: 20,
+            display: "flex",
+            gap: 14,
+            fontSize: 11,
+            color: "#999",
+            zIndex: 10,
+          }}
+        >
+          <a
+            href="#terms"
+            style={{ color: "#999", textDecoration: "none" }}
+          >
+            Terms of Use
+          </a>
+          <span>·</span>
+          <a
+            href="#privacy"
+            style={{ color: "#999", textDecoration: "none" }}
+          >
+            Privacy Policy
+          </a>
+          <span>·</span>
+          <span>© 2026 Mewt</span>
         </div>
       </div>
     </div>
