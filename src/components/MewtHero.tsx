@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import type { Dict, Locale } from "@/lib/i18n";
 
 const pins = [
   {
@@ -46,19 +48,12 @@ const pins = [
   },
 ];
 
-const chips = [
-  { icon: "🔊", label: "猫語翻訳" },
-  { icon: "📍", label: "猫マップ" },
-  { icon: "🐾", label: "猫日記" },
-];
+type Props = {
+  t: Dict;
+  locale: Locale;
+};
 
-const stats = [
-  { num: "120K+", label: "ユーザー" },
-  { num: "85K", label: "登録された猫" },
-  { num: "4.8★", label: "App Store" },
-];
-
-export const MewtHero = () => {
+export const MewtHero = ({ t, locale }: Props) => {
   const stageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -174,10 +169,19 @@ export const MewtHero = () => {
               color: "#555",
             }}
           >
-            <span style={{ cursor: "pointer" }}>猫語翻訳</span>
-            <span style={{ cursor: "pointer" }}>猫マップ</span>
-            <span style={{ cursor: "pointer" }}>コミュニティ</span>
-            <span style={{ cursor: "pointer" }}>お問い合わせ</span>
+            <span style={{ cursor: "pointer" }}>{t.nav.translate}</span>
+            <span style={{ cursor: "pointer" }}>{t.nav.map}</span>
+            <span style={{ cursor: "pointer" }}>{t.nav.community}</span>
+            <a
+              href="mailto:hello@mewt.uk"
+              style={{
+                cursor: "pointer",
+                color: "#555",
+                textDecoration: "none",
+              }}
+            >
+              {t.nav.contact}
+            </a>
           </div>
           <div
             style={{
@@ -188,7 +192,7 @@ export const MewtHero = () => {
               color: "#666",
             }}
           >
-            <span>JP / EN</span>
+            <LocaleSwitcher current={locale} variant="light" />
           </div>
         </nav>
 
@@ -229,7 +233,7 @@ export const MewtHero = () => {
                   boxShadow: "0 0 0 3px rgba(131,189,90,0.25)",
                 }}
               />
-              位置情報ベースの猫SNS · iOS / Android
+              {t.badge}
             </div>
 
             <h1
@@ -257,9 +261,9 @@ export const MewtHero = () => {
                 fontWeight: 500,
               }}
             >
-              街で出会った猫を撮って、地図にピン。
+              {t.subcopy1}
               <br />
-              鳴き声をAIが翻訳、同じ街の猫好きと、ゆるくつながる。
+              {t.subcopy2}
             </p>
 
             <div style={{ display: "flex", gap: 12, marginBottom: 28 }}>
@@ -297,12 +301,12 @@ export const MewtHero = () => {
                       letterSpacing: 0.5,
                     }}
                   >
-                    Download on the
+                    {t.download.appstoreSmall}
                   </div>
                   <div
                     style={{ fontSize: 16, fontWeight: 800, marginTop: -2 }}
                   >
-                    App Store
+                    {t.download.appstore}
                   </div>
                 </div>
               </a>
@@ -346,19 +350,19 @@ export const MewtHero = () => {
                       letterSpacing: 0.5,
                     }}
                   >
-                    Get it on
+                    {t.download.playSmall}
                   </div>
                   <div
                     style={{ fontSize: 16, fontWeight: 800, marginTop: -2 }}
                   >
-                    Google Play
+                    {t.download.play}
                   </div>
                 </div>
               </button>
             </div>
 
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              {chips.map((c, i) => (
+              {t.chips.map((c, i) => (
                 <div
                   key={i}
                   style={{
@@ -390,7 +394,7 @@ export const MewtHero = () => {
                 alignItems: "flex-start",
               }}
             >
-              {stats.map((s, i) => (
+              {t.stats.map((s, i) => (
                 <div
                   key={i}
                   style={{ display: "flex", flexDirection: "column" }}
@@ -588,11 +592,11 @@ export const MewtHero = () => {
                       letterSpacing: 0.5,
                     }}
                   >
-                    MEOW TRANSLATED
+                    {t.translated}
                   </div>
                   <div>
-                    &quot;遊ぼうよ！&quot;{" "}
-                    <span style={{ opacity: 0.5 }}>· 遊ぼう</span>
+                    {t.translation}{" "}
+                    <span style={{ opacity: 0.5 }}>{t.translationSub}</span>
                   </div>
                 </div>
               </div>
@@ -718,10 +722,10 @@ export const MewtHero = () => {
                           color: "#1a1a1a",
                         }}
                       >
-                        三毛ちゃん
+                        {t.phoneName}
                       </div>
                       <div style={{ fontSize: 9, color: "#888" }}>
-                        恵比寿公園 · 120m
+                        {t.phoneLocation}
                       </div>
                     </div>
                     <div
@@ -734,7 +738,7 @@ export const MewtHero = () => {
                         borderRadius: 8,
                       }}
                     >
-                      +Pin
+                      {t.phonePin}
                     </div>
                   </div>
                   <div
@@ -751,9 +755,7 @@ export const MewtHero = () => {
                     }}
                   >
                     <span style={{ fontSize: 14 }}>🔊</span>
-                    <span style={{ color: "#ddff1e" }}>
-                      &quot;お腹すいた〜&quot;
-                    </span>
+                    <span style={{ color: "#ddff1e" }}>{t.phoneSpeech}</span>
                   </div>
                 </div>
               </div>
@@ -771,39 +773,9 @@ export const MewtHero = () => {
                 transform: "rotate(-4deg)",
               }}
             >
-              ↑ 友達が Pin した猫
+              {t.caption}
             </div>
           </div>
-        </div>
-
-        {/* 底部链接 */}
-        <div
-          style={{
-            position: "absolute",
-            left: 56,
-            bottom: 20,
-            display: "flex",
-            gap: 14,
-            fontSize: 11,
-            color: "#999",
-            zIndex: 10,
-          }}
-        >
-          <a
-            href="#terms"
-            style={{ color: "#999", textDecoration: "none" }}
-          >
-            Terms of Use
-          </a>
-          <span>·</span>
-          <a
-            href="#privacy"
-            style={{ color: "#999", textDecoration: "none" }}
-          >
-            Privacy Policy
-          </a>
-          <span>·</span>
-          <span>© 2026 Mewt</span>
         </div>
       </div>
     </div>
