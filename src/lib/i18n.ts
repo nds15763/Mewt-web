@@ -15,6 +15,8 @@ export type Dict = {
     map: string;
     community: string;
     contact: string;
+    terms: string;
+    privacy: string;
   };
   badge: string;
   subcopy1: string;
@@ -66,6 +68,8 @@ const ja: Dict = {
     map: "猫マップ",
     community: "コミュニティ",
     contact: "お問い合わせ",
+    terms: "利用規約",
+    privacy: "プライバシー",
   },
   badge: "位置情報ベースの猫SNS · iOS / Android",
   subcopy1: "街で出会った猫を撮って、地図にピン。",
@@ -142,6 +146,8 @@ const en: Dict = {
     map: "Cat Map",
     community: "Community",
     contact: "Contact",
+    terms: "Terms",
+    privacy: "Privacy",
   },
   badge: "Location-based cat SNS · iOS / Android",
   subcopy1: "Snap the cats you meet on the street and pin them on the map.",
@@ -218,6 +224,8 @@ const zh: Dict = {
     map: "猫咪地图",
     community: "社区",
     contact: "联系我们",
+    terms: "使用条款",
+    privacy: "隐私政策",
   },
   badge: "基于地理位置的猫咪SNS · iOS / Android",
   subcopy1: "把街头遇到的猫咪拍下来，标在地图上。",

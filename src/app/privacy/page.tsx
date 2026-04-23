@@ -1,7 +1,6 @@
 import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
-import { Footer } from "@/components/Footer";
 import { PrivacyArticle } from "@/components/LegalArticle";
 import { DEFAULT_LOCALE, dict, isLocale, type Locale } from "@/lib/i18n";
 
@@ -22,9 +21,8 @@ export default async function PrivacyPage() {
 
   return (
     <>
-      <SiteHeader locale={locale} />
+      <SiteHeader t={t} locale={locale} />
       <PrivacyArticle t={t} />
-      <Footer t={t} locale={locale} />
     </>
   );
 }

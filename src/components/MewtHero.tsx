@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import type { Dict, Locale } from "@/lib/i18n";
@@ -172,6 +173,18 @@ export const MewtHero = ({ t, locale }: Props) => {
             <span style={{ cursor: "pointer" }}>{t.nav.translate}</span>
             <span style={{ cursor: "pointer" }}>{t.nav.map}</span>
             <span style={{ cursor: "pointer" }}>{t.nav.community}</span>
+            <Link
+              href="/terms"
+              style={{ color: "#555", textDecoration: "none" }}
+            >
+              {t.nav.terms}
+            </Link>
+            <Link
+              href="/privacy"
+              style={{ color: "#555", textDecoration: "none" }}
+            >
+              {t.nav.privacy}
+            </Link>
             <a
               href="mailto:hello@mewt.uk"
               style={{

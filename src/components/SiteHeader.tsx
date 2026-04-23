@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
-import type { Locale } from "@/lib/i18n";
+import type { Dict, Locale } from "@/lib/i18n";
 
 type Props = {
+  t: Dict;
   locale: Locale;
 };
 
-export const SiteHeader = ({ locale }: Props) => {
+export const SiteHeader = ({ t, locale }: Props) => {
   return (
     <header
       style={{
@@ -57,6 +58,36 @@ export const SiteHeader = ({ locale }: Props) => {
             MEWT
           </span>
         </Link>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 28,
+            fontSize: 13,
+            fontWeight: 600,
+            color: "#555",
+          }}
+        >
+          <Link
+            href="/terms"
+            style={{ color: "#555", textDecoration: "none" }}
+          >
+            {t.nav.terms}
+          </Link>
+          <Link
+            href="/privacy"
+            style={{ color: "#555", textDecoration: "none" }}
+          >
+            {t.nav.privacy}
+          </Link>
+          <a
+            href="mailto:hello@mewt.uk"
+            style={{ color: "#555", textDecoration: "none" }}
+          >
+            {t.nav.contact}
+          </a>
+        </div>
+
         <LocaleSwitcher current={locale} variant="light" />
       </nav>
     </header>
